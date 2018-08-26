@@ -40,9 +40,9 @@ public class EnemyBeahvior : MonoBehaviour
             playerPos = new Vector2(playerTransform.position.x, playerTransform.position.y);
             direction = playerPos - myPos;
 
-            isaWall = Physics2D.Raycast(transform.position, direction, visionRadius, wallLayers);
+            isaWall = Physics2D.Raycast(transform.position, direction.normalized, Vector2.Distance(myPos, playerPos), wallLayers);
 
-            Debug.Log(isaWall);
+            Debug.Log(direction.normalized);
 
             if (!isaWall)
             {
@@ -55,7 +55,10 @@ public class EnemyBeahvior : MonoBehaviour
     void followPlayer()
     {
 
-        rb2d.AddForce(direction * acceleration);
+        if (rb2d.velocity.magnitude < maxSpeed)
+        {
+            rb2d.AddForce(direction.normalized * acceleration);
+        }
 
     }
 
@@ -63,6 +66,8 @@ public class EnemyBeahvior : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, direction);
+
+        Gizmos.DrawWireSphere(transform.position, visionRadius);
     }
 
 }
