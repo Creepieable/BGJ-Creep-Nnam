@@ -16,8 +16,9 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate() { 
         // get Key-Input 
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+         float horizontal = Input.GetAxis("Horizontal");
+         float vertical = Input.GetAxis("Vertical");
+  
         
         Vector2 movement = new Vector2(horizontal, vertical); 
         // apply limited force 
@@ -25,6 +26,9 @@ public class PlayerMovement : MonoBehaviour {
             rb2d.AddForce(movement * acceleration);
         }
 
+
+   
+       
        
     }
 
