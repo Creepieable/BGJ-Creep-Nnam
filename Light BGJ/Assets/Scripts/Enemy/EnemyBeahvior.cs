@@ -42,8 +42,6 @@ public class EnemyBeahvior : MonoBehaviour
 
             isaWall = Physics2D.Raycast(transform.position, direction.normalized, Vector2.Distance(myPos, playerPos), wallLayers);
 
-            Debug.Log(direction.normalized);
-
             if (!isaWall)
             {
                 followPlayer();
@@ -66,7 +64,6 @@ public class EnemyBeahvior : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, direction);
-
         Gizmos.DrawWireSphere(transform.position, visionRadius);
     }
 
