@@ -141,9 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1558c6b5a675cd644abb54f9fdb3418c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  random: 1
   minFlicker: 0.01
   maxFlicker: 0.01
-  flickerAmmount: 0.27
+  flickerAmmount: 0.25
 --- !u!331 &331045311351037634
 SpriteMask:
   m_ObjectHideFlags: 1
