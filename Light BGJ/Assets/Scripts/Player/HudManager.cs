@@ -14,18 +14,20 @@ public class HudManager : MonoBehaviour {
     public Sprite HeartEmpty;
     public Sprite HeartFull;
 
-    private GameObject[] heart;
+    private List<GameObject> heartClones;
 
 	// Use this for initialization
 	void Start () {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerTakeDamageBehaviour>();
 
+        heartClones = new List<GameObject>();
+
         for (int i = 0; i < Player.playerHp; i++)
         {
-            heart[i] = Instantiate(Heart, Healthbar.transform.position, Healthbar.transform.rotation, Healthbar.transform);
+            heartClones.Add(Instantiate(Heart, Healthbar.transform.position, Healthbar.transform.rotation, Healthbar.transform) as GameObject);
         }
 
-        Debug.Log(heart.Length);
+        Debug.Log(heartClones.Count);
 	}
 	
 	// Update is called once per frame
