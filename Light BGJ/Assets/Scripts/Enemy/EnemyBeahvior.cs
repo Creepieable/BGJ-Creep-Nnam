@@ -16,6 +16,7 @@ public class EnemyBeahvior : MonoBehaviour
 
     private bool inVision;
     private bool isaWall = false;
+    private bool detect;
 
     private Vector2 playerPos;
     private Vector2 direction;
@@ -44,8 +45,18 @@ public class EnemyBeahvior : MonoBehaviour
 
             if (!isaWall)
             {
-                followPlayer();
+                detect = true;
             }
+           
+        }
+        else
+        {
+            detect = false;
+        }
+
+        if (detect)
+        {
+            followPlayer();
         }
 
     }

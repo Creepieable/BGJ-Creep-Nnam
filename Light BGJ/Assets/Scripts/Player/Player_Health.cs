@@ -25,13 +25,11 @@ public class Player_Health : MonoBehaviour
             force.Normalize();
             gameObject.GetComponent<Rigidbody2D>().AddForce(force * magnitude);
 
+            if (current_player_hp <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
-
-        if (current_player_hp <= 0)
-        {
-            Destroy(gameObject);
-        }
-
 
 
     }
