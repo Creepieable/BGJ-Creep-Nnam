@@ -7,31 +7,20 @@ using UnityEngine.UI;
 public class Player_Health : MonoBehaviour
 {
 
-    public int current_player_hp;
-    public int max_player_hp;
+    public int current_player_hp = 5;
+    public int max_player_hp = 5;
 
     public Image[] hearts;
     public Sprite Heart_full;
     public Sprite Heart_empty;
 
+    private Rigidbody2D rb2d;
+
     public float magnitude;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void Start()
     {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            current_player_hp--;
-            var force = transform.position - collision.transform.position;
-            force.Normalize();
-            gameObject.GetComponent<Rigidbody2D>().AddForce(force * magnitude);
-
-            if (current_player_hp <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }
-
-
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -67,6 +56,20 @@ public class Player_Health : MonoBehaviour
 
         }
     }
+
+    public void takeDamage(float damage,float knockforce, Transform enimTransform)
+    {
+        current_player_hp--;
+        var dir = transform.position - enimTransform.transform.position;
+        dir.Normalize();
+        rb2d.AddForce(dir * knockforce);
+
+        if (current_player_hp <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
 
 
