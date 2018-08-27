@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class PlayerTakeDamageBehaviour : MonoBehaviour
 {
 
-    public int current_player_hp = 5;
-    public int max_player_hp = 5;
+    public int playerHp = 5;
+    public int maxPlayerHp = 5;
 
     public bool GodMode;
     private bool invincible;
@@ -61,13 +61,11 @@ public class PlayerTakeDamageBehaviour : MonoBehaviour
             {
 
                 if (!isColored)
-                {
-                    Debug.Log("Büp");
+                {                  
                     spRen.color = blinkColor;
                 }
                 else
-                {
-                    Debug.Log("Bop");
+                {                   
                     spRen.color = standardColor;
                 }
 
@@ -105,15 +103,15 @@ public class PlayerTakeDamageBehaviour : MonoBehaviour
         }
 
         //Die if helth <=0
-        if (current_player_hp <= 0)
+        if (playerHp <= 0)
         {
             Die();
         }
 
         //limit to Max lives
-        if (current_player_hp > max_player_hp)
+        if (playerHp > maxPlayerHp)
         {
-            current_player_hp = max_player_hp;
+            playerHp = maxPlayerHp;
         }
     }
 
@@ -124,7 +122,7 @@ public class PlayerTakeDamageBehaviour : MonoBehaviour
             invinceTime = invinceDuration;
         }
 
-            current_player_hp--;
+            playerHp--;
             Vector2 dir = transform.position - enim.transform.position;
             dir.Normalize();
             rb2d.AddForce(dir * knockforce);       
