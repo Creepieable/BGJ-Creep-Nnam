@@ -13,7 +13,7 @@ public class EnemyDamageBeahviour : MonoBehaviour {
         {
             PlayerTakeDamageBehaviour PLayer = collider.gameObject.GetComponent<PlayerTakeDamageBehaviour>();
 
-            PLayer.takeDamage(damage,knockback,transform);
+            PLayer.takeDamage(damage,knockback,gameObject);
         }
 
 	}
