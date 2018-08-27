@@ -152,6 +152,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114422165067467524, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: magnitude
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643472211761140, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: maxspeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e87ebde1fb23ca48981ef6b601bc593, type: 2}
   m_IsPrefabAsset: 0
@@ -197,6 +207,10 @@ Prefab:
     - target: {fileID: 1538628189578988, guid: f39ff44753b467c49aae0cc26256a804, type: 2}
       propertyPath: m_Name
       value: Enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538628189578988, guid: f39ff44753b467c49aae0cc26256a804, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f39ff44753b467c49aae0cc26256a804, type: 2}
@@ -394,6 +408,10 @@ Prefab:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1538628189578988, guid: f39ff44753b467c49aae0cc26256a804, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f39ff44753b467c49aae0cc26256a804, type: 2}
   m_IsPrefabAsset: 0
@@ -523,6 +541,10 @@ Prefab:
     - target: {fileID: 4241745967570886, guid: f39ff44753b467c49aae0cc26256a804, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538628189578988, guid: f39ff44753b467c49aae0cc26256a804, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f39ff44753b467c49aae0cc26256a804, type: 2}
