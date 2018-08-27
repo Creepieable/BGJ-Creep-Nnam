@@ -28,7 +28,7 @@ public class CameraController : MonoBehaviour {
 
             trueLerpTime = lerpTime * Vector3.Distance(Player.position, transform.position - offset);
 
-            transform.position = Vector3.Lerp(transform.position, Player.position + offset, lerpTime);
+            transform.position = Vector3.Lerp(transform.position, Player.position + offset, trueLerpTime);
 
         }
 
