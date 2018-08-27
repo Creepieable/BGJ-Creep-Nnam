@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerTakeDamageBehaviour : MonoBehaviour
 {
 
     public int current_player_hp = 5;

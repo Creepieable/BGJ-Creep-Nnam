@@ -11,7 +11,7 @@ public class EnemyDamageBeahviour : MonoBehaviour {
 
         if (collider.gameObject.tag == "Player")
         {
-            PlayerHealth PLayer = collider.gameObject.GetComponent<PlayerHealth>();
+            PlayerTakeDamageBehaviour PLayer = collider.gameObject.GetComponent<PlayerTakeDamageBehaviour>();
 
             PLayer.takeDamage(damage,knockback,transform);
         }
