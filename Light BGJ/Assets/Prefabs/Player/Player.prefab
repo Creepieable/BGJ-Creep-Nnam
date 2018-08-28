@@ -210,12 +210,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4352ee2301642a4b97ffcb7ed60d184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_player_hp: 5
-  max_player_hp: 5
+  playerHp: 5
+  maxPlayerHp: 5
   GodMode: 0
   invinceDuration: 1
   blinkTime: 0.05
   blinkColor: {r: 1, g: 0.8593202, b: 0, a: 0.11764706}
+  deadPlayerPrefab: {fileID: 1813723174826036, guid: ed2aaaf6dfc178545b01468186175542,
+    type: 2}
 --- !u!114 &114537118169131068
 MonoBehaviour:
   m_ObjectHideFlags: 1
