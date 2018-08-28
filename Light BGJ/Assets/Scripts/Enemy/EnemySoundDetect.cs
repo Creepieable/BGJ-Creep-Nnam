@@ -6,7 +6,7 @@ public class EnemySoundDetect : MonoBehaviour {
 
     public float loudness;
     public LayerMask layer;
-    private GameObject player;
+    private Collider2D player;
 
     public float minTimeToMakeaSound;
     public float maxTimeToMakeaSound;
@@ -26,24 +26,27 @@ public class EnemySoundDetect : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        player = Physics2D.OverlapCircle(transform.position, loudness, layer).gameObject;
+        player = Physics2D.OverlapCircle(transform.position, loudness, layer);
 
-        if(player.tag == "Player")
+        if (player != null)
         {
-            if (timer > timeToMakeaSound)
+            if (player.tag == "Player")
             {
-                Vector3 randOffset = new Vector3(RandomOffset(), RandomOffset(), transform.position.z);
-                Quaternion randRot = new Quaternion(transform.rotation.x, transform.rotation.y, Random.rotation.z, transform.rotation.w);
-                GameObject instance = Instantiate(effects[Random.Range(0, effects.Length)], transform.position + randOffset, randRot) as GameObject;
+                if (timer > timeToMakeaSound)
+                {
+                    Vector3 randOffset = new Vector3(RandomOffset(), RandomOffset(), transform.position.z);
+                    Quaternion randRot = new Quaternion(transform.rotation.x, transform.rotation.y, Random.rotation.z, transform.rotation.w);
+                    GameObject instance = Instantiate(effects[Random.Range(0, effects.Length)], transform.position + randOffset, randRot) as GameObject;
 
-                Destroy(instance, 5f);
+                    Destroy(instance, 5f);
 
-                timer = 0;
-                timeToMakeaSound = Random.Range(minTimeToMakeaSound,maxTimeToMakeaSound);
-            }
-            else
-            {
-                timer += Time.deltaTime;
+                    timer = 0;
+                    timeToMakeaSound = Random.Range(minTimeToMakeaSound, maxTimeToMakeaSound);
+                }
+                else
+                {
+                    timer += Time.deltaTime;
+                }
             }
         }
 	}
