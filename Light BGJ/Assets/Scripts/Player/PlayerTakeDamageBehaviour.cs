@@ -28,6 +28,8 @@ public class PlayerTakeDamageBehaviour : MonoBehaviour
 
     private Rigidbody2D rb2d;
 
+    public GameObject deadPlayerPrefab;
+
     void Start()
     {
         spRen = GetComponent<SpriteRenderer>();
@@ -137,7 +139,8 @@ public class PlayerTakeDamageBehaviour : MonoBehaviour
     {
         if (!GodMode)
         {
-            Debug.Log("PlayerDeath");
+            Instantiate(deadPlayerPrefab,transform.position,transform.rotation);
+            Destroy(gameObject);
         }
     }
 
