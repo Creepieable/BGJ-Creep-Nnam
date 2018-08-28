@@ -370,6 +370,66 @@ Prefab:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114422165067467524, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: maxPlayerHp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422165067467524, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: playerHp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422165067467524, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: blinkColor.r
+      value: 0.99765027
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422165067467524, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: blinkColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422165067467524, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: blinkColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422165067467524, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: blinkColor.a
+      value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 331705317263134100, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: m_FrontSortingLayerID
+      value: 1670591111
+      objectReference: {fileID: 0}
+    - target: {fileID: 331705317263134100, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: m_FrontSortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 331675545810896594, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: m_FrontSortingLayerID
+      value: 1670591111
+      objectReference: {fileID: 0}
+    - target: {fileID: 331675545810896594, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: m_FrontSortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 331669395818486070, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: m_FrontSortingLayerID
+      value: 1670591111
+      objectReference: {fileID: 0}
+    - target: {fileID: 331669395818486070, guid: 5e87ebde1fb23ca48981ef6b601bc593,
+        type: 2}
+      propertyPath: m_FrontSortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e87ebde1fb23ca48981ef6b601bc593, type: 2}
   m_IsPrefabAsset: 0
@@ -514,6 +574,7 @@ GameObject:
   - component: {fileID: 1217724844}
   - component: {fileID: 1217724843}
   - component: {fileID: 1217724842}
+  - component: {fileID: 1217724845}
   m_Layer: 5
   m_Name: HeartContainer
   m_TagString: Untagged
@@ -595,6 +656,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1217724840}
   m_CullTransparentMesh: 0
+--- !u!114 &1217724845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1217724840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa92157f7f83cc14aa41fd49e6ad96f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Heart: {fileID: 1273806420934460, guid: 66efd58c1fc019240983996c1202e7d5, type: 2}
+  HeartEmpty: {fileID: 21300000, guid: 9c73d71cd811e5b47aaa8611c20bc7ca, type: 3}
+  HeartFull: {fileID: 21300000, guid: 003a8e2b1f1ac0249809c9d526f2d108, type: 3}
 --- !u!1001 &1290780685
 Prefab:
   m_ObjectHideFlags: 0
@@ -688,53 +763,39 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212207867124674366, guid: 34b9113940c9d934ab38a099825a0b09,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1670591111
+      objectReference: {fileID: 0}
+    - target: {fileID: 212207867124674366, guid: 34b9113940c9d934ab38a099825a0b09,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212789613026518126, guid: 34b9113940c9d934ab38a099825a0b09,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1670591111
+      objectReference: {fileID: 0}
+    - target: {fileID: 212789613026518126, guid: 34b9113940c9d934ab38a099825a0b09,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212086903005572604, guid: 34b9113940c9d934ab38a099825a0b09,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1670591111
+      objectReference: {fileID: 0}
+    - target: {fileID: 212086903005572604, guid: 34b9113940c9d934ab38a099825a0b09,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34b9113940c9d934ab38a099825a0b09, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1666509144
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1666509146}
-  - component: {fileID: 1666509145}
-  m_Layer: 0
-  m_Name: HudManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1666509145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1666509144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa92157f7f83cc14aa41fd49e6ad96f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Healthbar: {fileID: 1217724840}
-  Heart: {fileID: 1273806420934460, guid: 66efd58c1fc019240983996c1202e7d5, type: 2}
-  HeartEmpty: {fileID: 21300000, guid: 9c73d71cd811e5b47aaa8611c20bc7ca, type: 3}
-  HeartFull: {fileID: 21300000, guid: 003a8e2b1f1ac0249809c9d526f2d108, type: 3}
---- !u!4 &1666509146
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1666509144}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000030517578, y: -0.000030517578, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1806658105
 Prefab:
   m_ObjectHideFlags: 0
@@ -870,3 +931,46 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4445fef2e82949742be46a79fa14f4fb, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2038077234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038077236}
+  - component: {fileID: 2038077235}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2038077235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038077234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4205c419c1cbe64f8bd8a1dde42cdf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - MainCamera
+  - Player
+--- !u!4 &2038077236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038077234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5712743, y: 11.328963, z: -5.1331596}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

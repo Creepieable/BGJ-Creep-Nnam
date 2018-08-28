@@ -113,6 +113,11 @@ public class PlayerTakeDamageBehaviour : MonoBehaviour
         {
             playerHp = maxPlayerHp;
         }
+
+        if(playerHp < 0)
+        {
+            playerHp = 0;
+        }
     }
 
     public void takeDamage(float damage,float knockforce, GameObject enim)
@@ -130,7 +135,10 @@ public class PlayerTakeDamageBehaviour : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        if (!GodMode)
+        {
+            Debug.Log("PlayerDeath");
+        }
     }
 
 }
