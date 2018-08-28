@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50941960153178326}
   - component: {fileID: 114728549782938128}
   - component: {fileID: 114629729903669290}
+  - component: {fileID: 114313364837393574}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538628189578988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8322306, y: -6.62821, z: 0}
+  m_LocalPosition: {x: 7.77, y: -0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,6 +80,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114313364837393574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538628189578988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebaab5b75e873c41b98a8f9159cc1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudness: 9
+  layer:
+    serializedVersion: 2
+    m_Bits: 256
+  maxTimeToMakeaSound: 3
+  minTimeToMakeaSound: 5
+  maxOffset: 3
+  minOffset: -3
+  effects:
+  - {fileID: 1014692255320606, guid: cdf6113399f39314894f3cdd3a7b8b0c, type: 2}
 --- !u!114 &114629729903669290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  knockback: 1000
 --- !u!114 &114728549782938128
 MonoBehaviour:
   m_ObjectHideFlags: 1
