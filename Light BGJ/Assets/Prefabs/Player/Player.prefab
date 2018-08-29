@@ -84,6 +84,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4864328655294066}
   - component: {fileID: 212834557910609098}
+  - component: {fileID: 95222978745102880}
+  - component: {fileID: 114532932712047090}
   - component: {fileID: 58122604934238966}
   - component: {fileID: 50240340395123070}
   - component: {fileID: 114643472211761140}
@@ -198,7 +200,25 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.35
+--- !u!95 &95222978745102880
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866658612885416}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3654449f968354f4e90a7038eeb9c2d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114422165067467524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,9 +235,21 @@ MonoBehaviour:
   GodMode: 0
   invinceDuration: 1
   blinkTime: 0.05
-  blinkColor: {r: 1, g: 0.8593202, b: 0, a: 0.11764706}
+  blinkColor: {r: 0.99765027, g: 1, b: 0, a: 0.32941177}
   deadPlayerPrefab: {fileID: 1813723174826036, guid: ed2aaaf6dfc178545b01468186175542,
     type: 2}
+--- !u!114 &114532932712047090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866658612885416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3557119cf6da97543af4c8f3aaac8878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 1
 --- !u!114 &114537118169131068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,7 +313,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: 2ba841c2d8e01f3478a6e4d2c24ee88a, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 626acf2706a807c4e8fb013a6ab14985, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

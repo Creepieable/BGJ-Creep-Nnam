@@ -99,10 +99,10 @@ TextureImporter:
       name: PlayerMovement_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 47
-        width: 10
-        height: 11
+        x: 0
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,7 +110,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7427bf55a32f1854a985238ab657e850
+      spriteID: d2528274484f31e42bc173044f39ae88
       vertices: []
       indices: 
       edges: []
@@ -119,10 +119,10 @@ TextureImporter:
       name: PlayerMovement_1
       rect:
         serializedVersion: 2
-        x: 21
-        y: 47
-        width: 10
-        height: 11
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,7 +130,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4d570b1a62b27540b7bf8f919ffd159
+      spriteID: 83c7454a2d092e949ae93874f7a8db62
       vertices: []
       indices: 
       edges: []
@@ -139,10 +139,10 @@ TextureImporter:
       name: PlayerMovement_2
       rect:
         serializedVersion: 2
-        x: 47
-        y: 47
-        width: 10
-        height: 11
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,7 +150,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a354314c5cd5e0341bdeb3f5a7f26dcc
+      spriteID: 7ed2628c257cb464a86612a354eeec9c
       vertices: []
       indices: 
       edges: []
@@ -159,10 +159,10 @@ TextureImporter:
       name: PlayerMovement_3
       rect:
         serializedVersion: 2
-        x: 60
-        y: 47
-        width: 10
-        height: 11
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,7 +170,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4e4d013acccd984abcd140403fb0ca9
+      spriteID: 68d90b1991d459f42a408c78df51251a
       vertices: []
       indices: 
       edges: []
@@ -179,10 +179,10 @@ TextureImporter:
       name: PlayerMovement_4
       rect:
         serializedVersion: 2
-        x: 8
-        y: 27
-        width: 10
-        height: 11
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,7 +190,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afbe81f5047cb434f811b4a000645021
+      spriteID: d92deb865af8c784aa4e1ab3738fdbe7
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
       name: PlayerMovement_5
       rect:
         serializedVersion: 2
-        x: 21
-        y: 27
-        width: 10
-        height: 11
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,7 +210,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4771525c878a71848b5e2fdd23dbefa0
+      spriteID: ba04e8c16c39ac549aec31b239ef522f
       vertices: []
       indices: 
       edges: []
@@ -219,10 +219,10 @@ TextureImporter:
       name: PlayerMovement_6
       rect:
         serializedVersion: 2
-        x: 47
-        y: 27
-        width: 10
-        height: 11
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,7 +230,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 495089ce48097e2438117bf2785b0459
+      spriteID: 9d1d0a257ee43d94faab18f9ae7a4f0a
       vertices: []
       indices: 
       edges: []
@@ -239,10 +239,10 @@ TextureImporter:
       name: PlayerMovement_7
       rect:
         serializedVersion: 2
-        x: 60
-        y: 27
-        width: 10
-        height: 11
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,87 +250,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 846a7733e0c50c54eba1fd50b3e353f9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerMovement_8
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 7
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fcbdf137be61d847bea8d825871c99c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerMovement_9
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 7
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aeb80113186383541a457d13b1fad968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerMovement_10
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 7
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 162163798d8695d40b13a3da49a877d1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerMovement_11
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 7
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22d7ee5f817f3c24f9cbaeecfcb3433b
+      spriteID: 31a2d089c91b7ba45a6310c65af960cc
       vertices: []
       indices: 
       edges: []
