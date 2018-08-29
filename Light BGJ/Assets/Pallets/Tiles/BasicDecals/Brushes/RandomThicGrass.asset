@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: RandomThicGrass
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_Tile: {fileID: 0}
+  - m_Tile: {fileID: 11400000, guid: 7922a52d1e6718f4bb10ef4c469b4918, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -33,4 +33,6 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Size: {x: 1, y: 1, z: 1}
   m_Pivot: {x: 0, y: 0, z: 0}
-  randomTiles: []
+  randomTiles:
+  - {fileID: 11400000, guid: 5d6b98e1827333d4fb70f3de1246b985, type: 2}
+  - {fileID: 11400000, guid: 8a90ae42f5f94a0478c9318e169a3374, type: 2}

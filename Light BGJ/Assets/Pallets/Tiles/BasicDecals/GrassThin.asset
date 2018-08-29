@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: GrassThin
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 21300038, guid: 06b4fd29bad69b248946a6cde6a7308d, type: 3}
-  - {fileID: 21300036, guid: 06b4fd29bad69b248946a6cde6a7308d, type: 3}
+  - {fileID: 21300062, guid: 06b4fd29bad69b248946a6cde6a7308d, type: 3}
+  - {fileID: 21300060, guid: 06b4fd29bad69b248946a6cde6a7308d, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

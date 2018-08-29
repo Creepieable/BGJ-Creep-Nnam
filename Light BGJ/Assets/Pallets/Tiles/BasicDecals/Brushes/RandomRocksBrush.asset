@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d80edd6caba93514eb01722041fe50b4, type: 3}
-  m_Name: New Random Brush
+  m_Name: RandomRocksBrush
   m_EditorClassIdentifier: 
   m_Cells:
   - m_Tile: {fileID: 0}
@@ -33,4 +33,10 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Size: {x: 1, y: 1, z: 1}
   m_Pivot: {x: 0, y: 0, z: 0}
-  randomTiles: []
+  randomTiles:
+  - {fileID: 11400000, guid: dcba6535539307b4abd5f7c467be045b, type: 2}
+  - {fileID: 11400000, guid: d13db06307fd01a4da0d424ba904d254, type: 2}
+  - {fileID: 11400000, guid: 100988f83d1ee3340a8bb112e48577db, type: 2}
+  - {fileID: 11400000, guid: 0c51656fde61cdf48b9366b9a8091a5d, type: 2}
+  - {fileID: 11400000, guid: c6b9e22436517b04c825d4bef1147c3b, type: 2}
+  - {fileID: 11400000, guid: 6eecb32c0c77d1048a8356cc3d3470ec, type: 2}

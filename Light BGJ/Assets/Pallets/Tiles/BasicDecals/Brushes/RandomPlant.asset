@@ -33,4 +33,8 @@ MonoBehaviour:
     m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Size: {x: 1, y: 1, z: 1}
   m_Pivot: {x: 0, y: 0, z: 0}
-  randomTiles: []
+  randomTiles:
+  - {fileID: 11400000, guid: 2f7839c3bcffc9c4b8ee481fc877d5ad, type: 2}
+  - {fileID: 11400000, guid: 88e40b4164f3c1144acec8eac9950fea, type: 2}
+  - {fileID: 11400000, guid: 3eb3983355d7a61419a1c191baea0ad3, type: 2}
+  - {fileID: 0}
