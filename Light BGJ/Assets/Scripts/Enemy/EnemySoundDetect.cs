@@ -65,6 +65,7 @@ public class EnemySoundDetect : MonoBehaviour {
         {
             rnd -= rnd * 2;
         }
+        Debug.Log(rnd);
 
         return rnd;
     }
