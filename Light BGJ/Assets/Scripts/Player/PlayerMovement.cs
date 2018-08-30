@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-    public float acceleration;
-    public float maxspeed;
+    public float acceleration = 10;
+    public float maxspeed = 20;
     private Rigidbody2D rb2d;
    
 	// Use this for initialization

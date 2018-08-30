@@ -20,13 +20,15 @@ GameObject:
   m_Component:
   - component: {fileID: 4241745967570886}
   - component: {fileID: 212569327326098452}
+  - component: {fileID: 95971151990906822}
+  - component: {fileID: 114779343032230070}
   - component: {fileID: 58556146602622276}
   - component: {fileID: 50941960153178326}
-  - component: {fileID: 114728549782938128}
-  - component: {fileID: 114629729903669290}
-  - component: {fileID: 114313364837393574}
+  - component: {fileID: 114781291239643200}
+  - component: {fileID: 114824289341867968}
+  - component: {fileID: 114076585350350724}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Thief
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538628189578988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.45, y: -0.05, z: 0}
+  m_LocalPosition: {x: 5.38, y: -3.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,8 +81,26 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &114313364837393574
+  m_Radius: 0.4
+--- !u!95 &95971151990906822
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538628189578988}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e54299f2dc401614d8eaaee8474f1417, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114076585350350724
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,17 +111,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ebaab5b75e873c41b98a8f9159cc1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loudness: 9
+  loudness: 8
   layer:
     serializedVersion: 2
     m_Bits: 256
-  minTimeToMakeaSound: 5
-  maxTimeToMakeaSound: 10
+  minTimeToMakeaSound: 3
+  maxTimeToMakeaSound: 6
   minOffset: 2
-  maxOffset: 5
+  maxOffset: 3
   effects:
   - {fileID: 1014692255320606, guid: cdf6113399f39314894f3cdd3a7b8b0c, type: 2}
---- !u!114 &114629729903669290
+--- !u!114 &114779343032230070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538628189578988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3557119cf6da97543af4c8f3aaac8878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 1
+  stringUp: WalkingUp
+  stringDown: WalkingDown
+  stringLeft: WalkingLeft
+  stringRight: WalkingRight
+  stringIdle: Idle
+--- !u!114 &114781291239643200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538628189578988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc9311f26d8aa74688d3e6f0ce398ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointID: 0
+  acc: 10
+  maxSpeed: 20
+  layers:
+    serializedVersion: 2
+    m_Bits: 256
+  wallLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  visionRadius: 5
+--- !u!114 &114824289341867968
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,26 +172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   knockback: 1000
---- !u!114 &114728549782938128
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1538628189578988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e335b9bdc6d177a408af9d2c2d85a50a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 10
-  maxSpeed: 50
-  visionRadius: 5
-  layers:
-    serializedVersion: 2
-    m_Bits: 256
-  wallLayers:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!212 &212569327326098452
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -168,8 +206,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 4a2499bc3634840449cd872aa7a847b7, type: 3}
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300004, guid: 409535b3651acc842899e8223bfd7304, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

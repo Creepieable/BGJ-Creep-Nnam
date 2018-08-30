@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Patrole
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - Player
   - opaque
   - World
-  - Light
-  - 
+  - Enemy
+  - Unpassable
   - 
   - 
   - 

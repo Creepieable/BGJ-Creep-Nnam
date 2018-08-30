@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimationBehaviour : MonoBehaviour {
+public class WalkingAnimationBehaviour : MonoBehaviour {
 
     public float threshold;
 
@@ -14,6 +14,13 @@ public class PlayerAnimationBehaviour : MonoBehaviour {
     private bool Left;
     private bool Right;
 
+    public string stringUp = "MovingUp";
+    public string stringDown = "MovingDown";
+    public string stringLeft = "MovingLeft";
+    public string stringRight = "MovingRight";
+    public string stringIdle = "Idle";
+
+
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
@@ -23,7 +30,6 @@ public class PlayerAnimationBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector2 velocity = rb2d.velocity;
-        float velo = Mathf.Abs(velocity.x + velocity.y);
         //Oben
         if (velocity.y > 0 && Mathf.Abs(velocity.y) > threshold && Mathf.Abs(velocity.y) > Mathf.Abs(velocity.x))
         {
@@ -62,18 +68,18 @@ public class PlayerAnimationBehaviour : MonoBehaviour {
             Left = false;
         }
 
-        anim.SetBool("MovingUp", Up);
-        anim.SetBool("MovingDown", Down);
-        anim.SetBool("MovingLeft", Left);
-        anim.SetBool("MovingRight", Right);
+        anim.SetBool(stringUp, Up);
+        anim.SetBool(stringDown, Down);
+        anim.SetBool(stringLeft, Left);
+        anim.SetBool(stringRight, Right);
 
         if (!Up && !Down && !Left && !Right)
         {
-            anim.SetBool("Idle", true);
+            anim.SetBool(stringIdle, true);
         }
         else
         {
-            anim.SetBool("Idle", false);
+            anim.SetBool(stringIdle, false);
         }
 
     }
