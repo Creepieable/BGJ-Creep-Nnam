@@ -267,8 +267,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   random: 0
-  minFlicker: 0.1
-  maxFlicker: 0.1
+  minFlicker: 0.02
+  maxFlicker: 0.02
   flickerAmmount: 0.25
 --- !u!114 &114643472211761140
 MonoBehaviour:
