@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour {
+
     public GameObject arrow;
 
-    public float timeBetweenShots;
-    private float shotCounter;
-    private float tightenTime;
-    public float maxTighten;
-
+    public float shotForceMultiplier = 1;
+    public float shotDistance = 1;
+    public float timeBetweenShots;   
+    public float maxTighten = 5;
     public int arrows;
-    
+
+    private float shotCounter;
+    private float tightenTime = 1;
 
     private Rigidbody2D rb2d;
 
@@ -32,7 +34,7 @@ public class PlayerAttack : MonoBehaviour {
 
             if (Input.GetKey(KeyCode.Mouse0))
             {
-                realtightenTime += Time.deltaTime;
+                tightenTime += Time.deltaTime;
             }
 
             if (Input.GetKeyUp(KeyCode.Mouse0))
@@ -40,24 +42,33 @@ public class PlayerAttack : MonoBehaviour {
                 attack();
             }
         } 
-       if (realtightenTime > maxTighten)
+       if (tightenTime > maxTighten)
         {
-            realtightenTime = maxTighten;
+            tightenTime = maxTighten;
         }
     }
 
 
     void attack()
-    {
-        tightenTime = realtightenTime;
-        realtightenTime = 0;
-        arrows--;
+    {        
         shotCounter = timeBetweenShots;
-        Instantiate(arrow, rb2d.position, Quaternion.identity);
 
+
+        GameObject arrowInstance = Instantiate(arrow, rb2d.position, Quaternion.identity) as GameObject;
+        Rigidbody2D arrowRB = arrowInstance.GetComponent<Rigidbody2D>();
+
+        Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        Debug.Log(mouse.normalized * shotForceMultiplier * tightenTime);
+
+        arrowRB.AddForce(mouse.normalized * shotForceMultiplier * tightenTime);
+
+        ArrowBehaviour arrowScript = GetComponent<ArrowBehaviour>();
+
+        arrowScript.startPos = transform.position;
+
+        tightenTime = 1;
+        arrows--;
     }
-
-
-
 
 }
