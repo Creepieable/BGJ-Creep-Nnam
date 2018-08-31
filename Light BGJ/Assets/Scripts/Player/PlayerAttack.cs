@@ -8,6 +8,7 @@ public class PlayerAttack : MonoBehaviour {
     public float timeBetweenShots;
     public float shotCounter;
     public float tightenTime;
+    public float realtightenTime;
 
     public int arrows;
     
@@ -29,32 +30,27 @@ public class PlayerAttack : MonoBehaviour {
        if (arrows > 0 && shotCounter<=0 )
         {
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKey(KeyCode.Mouse0))
             {
-
-               while(Input.GetKeyDown(KeyCode.Mouse0))
-                {
-                    tightenTime += Time.deltaTime;
-                }
-
-                if (Input.GetKeyUp(KeyCode.Mouse0))
-                {
-                    attack();
-                }
-                
-                
+                realtightenTime += Time.deltaTime;
             }
-            
+
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                attack();
+            }
         } 
-       if (tightenTime > 3)
+       if (realtightenTime > 3)
         {
-            tightenTime = 3;
+            realtightenTime = 3;
         }
     }
 
 
     void attack()
     {
+        tightenTime = realtightenTime;
+        realtightenTime = 0;
         arrows--;
         shotCounter = timeBetweenShots;
         Instantiate(arrow, rb2d.position, Quaternion.identity);
