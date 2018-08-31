@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerHammer : MonoBehaviour {
     public float attackRadius;
-    public bool inRadius = false;
     public LayerMask stonedThieflayer;
 	
 	

@@ -18,7 +18,7 @@ public class ArrowBehaviour : MonoBehaviour {
 
     void Update () {
 
-        if (Vector2.Distance(startPos, transform.position) > flightDist)
+        if (Vector2.Distance(startPos, transform.position) >= flightDist)
         {
             rb2d.velocity = Vector2.zero;
         }

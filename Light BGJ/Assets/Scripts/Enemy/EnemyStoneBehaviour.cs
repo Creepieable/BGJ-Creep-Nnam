@@ -6,7 +6,8 @@ public class EnemyStoneBehaviour : MonoBehaviour {
     public GameObject Thief;
 
     public float stonedTime;
-    private float Timer = 0;
+    [HideInInspector]
+    public float Timer = 0;
 
     private Rigidbody2D rb2d;
 

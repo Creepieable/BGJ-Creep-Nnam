@@ -8,18 +8,20 @@ public class PlayerAttack : MonoBehaviour {
 
     public float shotForceMultiplier = 1;
     public float shotDistance = 1;
-    public float timeBetweenShots;   
+    public float timeBetweenShots;
+    public float minTighten = 0;
     public float maxTighten = 5;
     public int arrows;
 
     private float shotCounter;
-    private float tightenTime = 1;
+    private float tightenTime;
 
     private Rigidbody2D rb2d;
 
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        tightenTime = minTighten;
     }
 
     private void Update()
@@ -50,24 +52,25 @@ public class PlayerAttack : MonoBehaviour {
 
 
     void attack()
-    {        
+    {
+        Vector3 mouse = Vector2.zero;
+
         shotCounter = timeBetweenShots;
 
 
         GameObject arrowInstance = Instantiate(arrow, rb2d.position, Quaternion.identity) as GameObject;
         Rigidbody2D arrowRB = arrowInstance.GetComponent<Rigidbody2D>();
 
-        Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        Debug.Log(mouse.normalized * shotForceMultiplier * tightenTime);
+        mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
         arrowRB.AddForce(mouse.normalized * shotForceMultiplier * tightenTime);
 
-        ArrowBehaviour arrowScript = GetComponent<ArrowBehaviour>();
+        ArrowBehaviour arrowScript = arrowInstance.GetComponent<ArrowBehaviour>();
 
         arrowScript.startPos = transform.position;
+        arrowScript.flightDist = shotDistance * tightenTime;
 
-        tightenTime = 1;
+        tightenTime = minTighten;
         arrows--;
     }
 
