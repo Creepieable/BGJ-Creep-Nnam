@@ -11,9 +11,6 @@ public class Arrow : MonoBehaviour {
     
     private Vector2 target;
 
-    
-
-
     private void Start()
     {
         target = Camera.main.ScreenToWorldPoint(Input.mousePosition);

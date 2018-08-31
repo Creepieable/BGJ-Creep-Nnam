@@ -6,9 +6,9 @@ public class PlayerAttack : MonoBehaviour {
     public GameObject arrow;
 
     public float timeBetweenShots;
-    public float shotCounter;
-    public float tightenTime;
-    public float realtightenTime;
+    private float shotCounter;
+    private float tightenTime;
+    public float maxTighten;
 
     public int arrows;
     
@@ -40,9 +40,9 @@ public class PlayerAttack : MonoBehaviour {
                 attack();
             }
         } 
-       if (realtightenTime > 3)
+       if (realtightenTime > maxTighten)
         {
-            realtightenTime = 3;
+            realtightenTime = maxTighten;
         }
     }
 

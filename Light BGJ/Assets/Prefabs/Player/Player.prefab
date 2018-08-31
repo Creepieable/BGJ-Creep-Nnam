@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 50240340395123070}
   - component: {fileID: 114643472211761140}
   - component: {fileID: 114422165067467524}
+  - component: {fileID: 114478480607539336}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -238,6 +239,23 @@ MonoBehaviour:
   blinkColor: {r: 1, g: 0.9787234, b: 0, a: 0.2784314}
   deadPlayerPrefab: {fileID: 1813723174826036, guid: ed2aaaf6dfc178545b01468186175542,
     type: 2}
+--- !u!114 &114478480607539336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866658612885416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a1c70afc3fc76488162510ea4dc0ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 1479464317477998, guid: 1f194d9de59d11f47975896eb1c27a1a, type: 2}
+  timeBetweenShots: 2
+  shotCounter: 0
+  tightenTime: 0
+  realtightenTime: 0
+  arrows: 10
 --- !u!114 &114532932712047090
 MonoBehaviour:
   m_ObjectHideFlags: 1
