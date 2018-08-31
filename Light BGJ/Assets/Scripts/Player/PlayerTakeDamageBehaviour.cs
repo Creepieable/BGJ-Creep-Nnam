@@ -140,6 +140,7 @@ public class PlayerTakeDamageBehaviour : MonoBehaviour
         if (!GodMode)
         {
             Instantiate(deadPlayerPrefab,transform.position,transform.rotation);
+            GameObject.Find("GameManager").GetComponent<GameManager>().reloadScene();
             Destroy(gameObject);
         }
     }
