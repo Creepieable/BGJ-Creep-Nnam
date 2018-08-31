@@ -3,17 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyStoneBehaviour : MonoBehaviour {
+    public GameObject Thief;
 
-    public bool isStone = false;
-    public string stringStone;
+    public float stonedTime;
+    private float Timer = 0;
 
-    private 
+    private Rigidbody2D rb2d;
 
-	// Update is called once per frame
-	void Update () {
-        if (isStone)
+    private void Start()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
+    void Update () {
+        Timer += Time.deltaTime;
+        if (Timer >= stonedTime)
         {
-
+            Instantiate(Thief, rb2d.position, Quaternion.identity);
+            Destroy(gameObject);
         }
 	}
+
+    public void Destruct()
+    {
+        Destroy(gameObject);
+    }
 }

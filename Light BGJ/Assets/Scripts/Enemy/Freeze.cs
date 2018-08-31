@@ -3,28 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Freeze : MonoBehaviour {
-    public float freezeTime;
-    public float freezeUntil;
-    public bool freezer = false;
+    public GameObject stonedThief;
+    private Rigidbody2D rb2d;
+    private bool isStoned = false;
 
-    private void Update()
+    private void Start()
     {
-        if (freezeTime < freezeUntil)
-        {
-            freezeTime += Time.deltaTime;
-            freezer = true;
-        }
-        else
-        {
-            freezer = false;
-        }
+        rb2d = GetComponent < Rigidbody2D>();
     }
+
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "arrow")
         {
-            freezeTime = 0;
+            if (!isStoned)
+            {
+                Instantiate(stonedThief, transform.position, transform.rotation);
+                Destroy(gameObject);
+                isStoned = true;
+            }
         }
     }
 

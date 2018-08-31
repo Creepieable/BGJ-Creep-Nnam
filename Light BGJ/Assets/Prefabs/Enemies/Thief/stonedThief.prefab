@@ -21,15 +21,12 @@ GameObject:
   - component: {fileID: 4241745967570886}
   - component: {fileID: 212569327326098452}
   - component: {fileID: 95971151990906822}
-  - component: {fileID: 114779343032230070}
   - component: {fileID: 58556146602622276}
   - component: {fileID: 50941960153178326}
-  - component: {fileID: 114781291239643200}
-  - component: {fileID: 114824289341867968}
   - component: {fileID: 114076585350350724}
-  - component: {fileID: 114321944432025266}
-  m_Layer: 11
-  m_Name: Thief
+  - component: {fileID: 114664138620053252}
+  m_Layer: 14
+  m_Name: stonedThief
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,7 +119,7 @@ MonoBehaviour:
   maxOffset: 3
   effects:
   - {fileID: 1014692255320606, guid: cdf6113399f39314894f3cdd3a7b8b0c, type: 2}
---- !u!114 &114321944432025266
+--- !u!114 &114664138620053252
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,63 +127,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1538628189578988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd01d26ee061574697cb719f5184d58, type: 3}
+  m_Script: {fileID: 11500000, guid: 20b33f3c9e524e64d8e1339b42ce868d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stonedThief: {fileID: 1538628189578988, guid: b8ed2835a8287b44087f51764d3f5bb1,
-    type: 2}
-  check: 0
---- !u!114 &114779343032230070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1538628189578988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3557119cf6da97543af4c8f3aaac8878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  threshold: 1
-  stringUp: WalkingUp
-  stringDown: WalkingDown
-  stringLeft: WalkingLeft
-  stringRight: WalkingRight
-  stringIdle: Idle
---- !u!114 &114781291239643200
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1538628189578988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbc9311f26d8aa74688d3e6f0ce398ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointID: 0
-  acc: 10
-  maxSpeed: 20
-  playerlayer:
-    serializedVersion: 2
-    m_Bits: 256
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  visionRadius: 5
---- !u!114 &114824289341867968
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1538628189578988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e83d944bdefcf9346bbc60eeda3aaf21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  knockback: 1000
+  Thief: {fileID: 1538628189578988, guid: f39ff44753b467c49aae0cc26256a804, type: 2}
+  stonedTime: 5
 --- !u!212 &212569327326098452
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -59,8 +59,7 @@ public class EnemyMovementBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (gameObject.GetComponent<Freeze>().freezer == false)
-        {
+        
             if (detectPlayer())
             {
                 prevState = state;
@@ -80,8 +79,9 @@ public class EnemyMovementBehaviour : MonoBehaviour {
             {
 
             }
-        }
-	}
+        
+      
+    }
 
     void moveToPosition(Vector2 newPos)
     {
