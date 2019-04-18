@@ -60,8 +60,12 @@ public class PlayerAttack : MonoBehaviour {
 
         GameObject arrowInstance = Instantiate(arrow, rb2d.position, Quaternion.identity) as GameObject;
         Rigidbody2D arrowRB = arrowInstance.GetComponent<Rigidbody2D>();
+        
 
         mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        arrowInstance.transform.Rotate(0, 0, (Mathf.Atan2(mouse.y, mouse.x)-90) * Mathf.Rad2Deg);
+
+
 
         arrowRB.AddForce(mouse.normalized * shotForceMultiplier * tightenTime);
 
@@ -69,7 +73,7 @@ public class PlayerAttack : MonoBehaviour {
 
         arrowScript.startPos = transform.position;
         arrowScript.flightDist = shotDistance * tightenTime;
-
+        
         tightenTime = minTighten;
         arrows--;
     }

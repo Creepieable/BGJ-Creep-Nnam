@@ -5,21 +5,22 @@ using UnityEngine;
 public class PlayerHammer : MonoBehaviour {
     public float attackRadius;
     public LayerMask stonedThieflayer;
-	
+
+    public bool superHammer = false;
 	
 	// Update is called once per frame
 	void Update () {
 
-        Collider2D[] stonedAll = Physics2D.OverlapCircleAll(transform.position, attackRadius, stonedThieflayer);
+        Collider2D[] stonedInReach = Physics2D.OverlapCircleAll(transform.position, attackRadius, stonedThieflayer);
 
-
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetButtonDown("Fire2"))
         {
-           foreach (Collider2D coll in stonedAll)
-           {
-               EnemyStoneBehaviour stonedScript = coll.GetComponent<EnemyStoneBehaviour>();
-               stonedScript.Destruct();
-           }
+                //killall
+                foreach (Collider2D coll in stonedInReach)
+                {
+                    EnemyStoneBehaviour stonedScript = coll.GetComponent<EnemyStoneBehaviour>();
+                    stonedScript.Destruct();
+                }           
         }
     }
 }

@@ -140,8 +140,26 @@ public class PlayerTakeDamageBehaviour : MonoBehaviour
         if (!GodMode)
         {
             Instantiate(deadPlayerPrefab,transform.position,transform.rotation);
-            GameObject.Find("GameManager").GetComponent<GameManager>().reloadScene();
-            Destroy(gameObject);
+            GameObject gm = GameObject.Find("GameManager");
+            if (gm != null)
+            {
+                GameManager gmscript = gm.GetComponent<GameManager>();
+                if(gmscript != null)
+                {
+                    gmscript.reloadScene();
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    Debug.LogError(gm + ": Gamemanager script not found. Cannot reloade.");
+                    Destroy(gameObject);
+                }
+            }
+            else
+            {
+                Debug.LogError(gameObject + ": Gamemanager not found. Cannot reloade.");
+                Destroy(gameObject);
+            }
         }
     }
 

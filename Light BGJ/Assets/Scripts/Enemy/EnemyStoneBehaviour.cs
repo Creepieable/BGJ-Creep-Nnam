@@ -6,8 +6,11 @@ public class EnemyStoneBehaviour : MonoBehaviour {
     public GameObject Thief;
 
     public float stonedTime;
+    public GameObject Effect;
     [HideInInspector]
     public float Timer = 0;
+
+    private bool mouseOn = false;
 
     private Rigidbody2D rb2d;
 
@@ -26,6 +29,23 @@ public class EnemyStoneBehaviour : MonoBehaviour {
 
     public void Destruct()
     {
-        Destroy(gameObject);
+        if (mouseOn)
+        {
+            GameObject effect = Instantiate(Effect, transform.position, Quaternion.identity);
+            Destroy(effect, 4);
+            DestroyImmediate(gameObject);
+        }
+       
     }
+
+    private void OnMouseEnter()
+    {
+        mouseOn = true;
+    }
+
+    private void OnMouseExit()
+    {
+        mouseOn = false;
+    }
+
 }

@@ -26,7 +26,10 @@ public class PlayerMovement : MonoBehaviour {
         if (rb2d.velocity.magnitude <= maxspeed)
         {
             rb2d.AddForce(movement * acceleration);
-        }       
+        }
+
+       
+       
     }
 
 }
